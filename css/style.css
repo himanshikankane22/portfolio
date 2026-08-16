@@ -752,6 +752,67 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* ---------- MOODBOARD ---------- */
+.moodboard {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 150px;
+  gap: 20px;
+}
+
+.moodboard .card,
+.moodboard .card--link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.moodboard .card__thumb {
+  aspect-ratio: auto;
+  flex: 1;
+}
+
+.moodboard .card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.moodboard__item--tall {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.moodboard__item--wide {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+.moodboard__item--med {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.moodboard__item--small {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.card--tile {
+  justify-content: center;
+  background: linear-gradient(160deg, var(--surface) 0%, #101010 100%);
+}
+
+.card--tile .card__body {
+  padding: 28px;
+  justify-content: center;
+}
+
+.card--tile .card__title {
+  font-size: 1.375rem;
+  margin-top: 8px;
+}
+
 /* ---------- SKILLS ---------- */
 .skills {
   padding: 100px 0;
@@ -871,6 +932,23 @@ body {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .moodboard {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .moodboard__item--tall,
+  .moodboard__item--wide,
+  .moodboard__item--med,
+  .moodboard__item--small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .moodboard .card__thumb {
+    aspect-ratio: 16 / 10;
   }
 
   .stats {
