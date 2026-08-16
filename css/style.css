@@ -336,6 +336,19 @@ body {
   margin-top: 4px;
 }
 
+.card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
 /* ---------- ABOUT ---------- */
 .about {
   padding: 100px 0;
